@@ -21,6 +21,9 @@ It was found that there were 259 stocks, which consumed around 0.85 minutes/stoc
 Average time for sequential price prediction of all stocks and filtering = 0.85*259 ~ 212 minutes
 Time taken through multi-processing = 42.78 minutes
 
+![Screenshot 2024-08-27 194442](https://github.com/user-attachments/assets/53ae064f-d615-4190-8916-5f35fc9c44ea)
+
+
 
 
 
