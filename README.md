@@ -14,14 +14,24 @@ In order to study the stock price movements, we make use of the yfinance data vi
 
 ![4stocks](https://github.com/user-attachments/assets/60ab44e9-fada-4efb-8d8f-9eed0a61952a)
 
+## Filtering the Stocks to Make Predictions On : 
+In order to filter out which stocks to invest on, we take the estimate percentage increase of the stock price in the last 5 minutes of closing of the market. We set the threshold of the increase in the value to 0.25%. This is performed in order to look at the volatility of the stock and its movement, which is expected to be followed. After the first list of stocks is filtered out, the models are fit on the filtered stocks, which are expected to give a good return. 
+
+Out of the stocks on which the models are trained and price are predicted, if the stocks give a return over a pre-set threshold, the stock is then chosen to be invested in. 
+
 ## Forecasting the Stock Prices of the Stocks Listed on NSE
-In order to get an overview of the leverage of multi-processing, the same model training was employed on all the stocks that are listed on the NSE. A threshold value for the percentage increase in the stock price was established in order to filter out those stocks which were predicted to show the maximum rise in the prices for the next day or for the a particular window period. 
+In order to get an overview of the leverage of multi-processing, the same model training was employed on all the filtered stocks, after the first filtering stage, that are listed on the NSE. A threshold value for the percentage increase in the stock price was established in order to filter out those stocks which were predicted to show the maximum rise in the prices for the next day or for the a particular window period. 
 
-It was found that there were 259 stocks, which consumed around 0.85 minutes/stock for training and price prediction. 
-Average time for sequential price prediction of all stocks and filtering = 0.85*259 ~ 212 minutes
-Time taken through multi-processing = 42.78 minutes
+It was found that there were 259 stocks in total, out of which 36 were filtered out, which consumed around 0.65 minutes/stock for training and price prediction. 
+Average time for sequential price prediction of all stocks and filtering = 0.65*36 ~ 40.95 minutes
+Time taken through multi-processing = 3.72 minutes
 
-![Screenshot 2024-08-27 194442](https://github.com/user-attachments/assets/53ae064f-d615-4190-8916-5f35fc9c44ea)
+![Screenshot 2024-08-28 153852](https://github.com/user-attachments/assets/d5b8d148-7311-4e15-94e0-f0f83325933c)
+
+
+![Screenshot 2024-08-28 153837](https://github.com/user-attachments/assets/647b48a8-1c4b-4f34-a079-9a41cd8b6145)
+
+
 
 
 
